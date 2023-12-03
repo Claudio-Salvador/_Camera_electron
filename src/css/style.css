@@ -6,6 +6,8 @@ body{
     width: 100vw;
     margin: 0;
     padding: 0;
+   
+    background-repeat: no-repeat;
     
 }
 video{
@@ -17,21 +19,39 @@ button,body,#video{
     -webkit-app-region:drag;   
 }
 #container{
+    
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid rgb(240, 233, 232);
+    border: 6px solid rgb(255, 255, 255);
     outline: none;
 }
 #userNme{
-    z-index: 99;
-    padding: 10px;
-    background-color: rgba(216, 204, 33, 0.842);
-    color: white;
-    text-transform: uppercase;
-    font-weight: 900;
+ 
+    padding: 4px;
+    background-color: rgba(152, 152, 152, 0.36);
+    color: #000;
+    font-weight: 400;
+    font-size: 10pt;
+    position: absolute;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top:190px;
+    border-radius: 6px;
+}
+img{
+ 
+    padding: 4px;
+    z-index: -90;
+    font-weight: 400;
+    font-size: 10pt;
+    position: absolute;
+    margin-top: 27px;
+    border-radius: 6px;
+    width: 350px;
+    height: 350px;
+    
 }
