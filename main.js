@@ -2,8 +2,17 @@ const { app, BrowserWindow } = require('electron')
 
 const createWindow=()=>{
     const win= new BrowserWindow({
-        width:899,
-        height:499,
+        width:290,
+        height:290,
+        webPreferences:{
+            nodeIntegration:true
+        },
+        frame:false,
+        transparent:true,
+        movable:true,
+        resizable:false,
+        titleBarStyle:"customButtonsOnHover",
+        alwaysOnTop:true,
     });
 
     win.loadFile('src/index.html');
