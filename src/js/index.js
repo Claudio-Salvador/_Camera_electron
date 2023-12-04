@@ -3,18 +3,13 @@ function addVideoStream(stream) {
     video.srcObject = stream;
 }
 
-// Obtém informações sobre os dispositivos de vídeo disponíveis
 navigator.mediaDevices.enumerateDevices()
     .then(devices => {
-        // Filtra apenas os dispositivos de vídeo
         const videoDevices = devices.filter(device => device.kind === 'videoinput');
-
-        // Se houver pelo menos um dispositivo de vídeo
         if (videoDevices.length > 0) {
-            // Pode escolher o primeiro dispositivo de vídeo disponível
-            const selectedDeviceId = videoDevices[0].deviceId;
-
-            // Solicita permissão para acessar a câmera escolhida
+            const idVideoDevice = JSON.parse(localStorage.getItem("deviceDefault"));;
+            const selectedDeviceId = idVideoDevice ? idVideoDevice.id_device: videoDevices[0].deviceId;
+            document.getElementById("userName").textContent=idVideoDevice ? idVideoDevice.user_name: "";
             return navigator.mediaDevices.getUserMedia({
                 video: { deviceId: selectedDeviceId }
             });
@@ -25,3 +20,5 @@ navigator.mediaDevices.enumerateDevices()
     })
     .then(addVideoStream)
     .catch(error => console.log('Erro ao obter acesso à câmera:', error));
+
+  

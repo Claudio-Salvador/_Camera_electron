@@ -6,7 +6,6 @@ body{
     width: 100vw;
     margin: 0;
     padding: 0;
-   
     background-repeat: no-repeat;
     
 }
@@ -30,7 +29,7 @@ button,body,#video{
     border: 6px solid rgb(255, 255, 255);
     outline: none;
 }
-#userNme{
+#userName{
  
     padding: 4px;
     background-color: rgba(152, 152, 152, 0.36);
@@ -41,11 +40,25 @@ button,body,#video{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-top:190px;
     border-radius: 6px;
+    z-index: 1000;
 }
 img{
  
     padding: 4px;
     z-index: -90;
+    font-weight: 400;
+    font-size: 10pt;
+    position: absolute;
+    margin-top: 27px;
+    border-radius: 6px;
+    width: 350px;
+    height: 350px;
+    
+}
+#cog{
+ 
+    padding: 4px;
+  
     font-weight: 400;
     font-size: 10pt;
     position: absolute;

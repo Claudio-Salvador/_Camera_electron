@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/config.css">
 
 </head>
 <body>
     
- 
+  
+  <h1>CONFIGURAÇÃO</h1><br>
+  <div>
+    <select  id="deviceSelect">
+    </select>
+    <input type="text" id="userName" placeholder="Nome do Utilizador">
+  </div>
   <div id="container">
     <video autoplay muted id="video"></video>
   </div>
-  <img src="img/salvadorti.png" alt="" id="idBackgroundSetting">
+  
+  <div>
+    <button id="btnSaveConfig">GUARDAR</button>
+  </div>
 
-  <label for="" id="userName"></label>
+  
 
-<script src="js/index.js"></script>
+<script src="js/config.js"></script>
 </body>
 </html>
